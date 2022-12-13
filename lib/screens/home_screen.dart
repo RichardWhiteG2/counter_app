@@ -32,13 +32,39 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       //floatingActionButtonLocation   mueve la posición del boton. 
       //floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterFloat,
-      floatingActionButton:  FloatingActionButton(
-        child: const Icon(Icons.car_repair),
-        onPressed: () {  
-          counter++;
-          setState(() {});
-        },
-      
+      floatingActionButton:  Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton(
+            child: const Icon(Icons.exposure_plus_1_outlined),
+            onPressed: () {  
+              counter++;
+              setState(() {});
+            },
+          
+          ),
+          
+          FloatingActionButton(
+            child: const Icon(Icons.remember_me_outlined),
+            onPressed: () {  
+              counter=0;
+              setState(() {});
+            },
+          
+          ),
+
+
+          
+
+          FloatingActionButton(
+            child: const Icon(Icons.exposure_minus_1_outlined),
+            onPressed: () {  
+              counter--;
+              setState(() {});
+            },
+          
+          ),
+        ],
       ),
     );  
   }
